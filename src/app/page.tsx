@@ -41,7 +41,7 @@ export default function Home() {
                 </p>
             </section>
 
-            <section>
+            <section className="mb-4">
               <h4 className="font-bold text-lg md:text-xl text-[#3BCEC6] mb-2">Skills</h4>
               <div className="flex flex-col gap-2">
                 <p className="text-sm md:text-base">Programming Languanges</p>
@@ -98,6 +98,46 @@ export default function Home() {
                 </div>
               </div>
             </section>
+
+            <section className="mb-4">
+              <h4 className="font-bold text-lg md:text-xl text-[#3BCEC6] mb-2">Experience</h4>
+
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1">
+                    <p className="font-semibold text-sm md:text-base">PT Balisolutionbiz</p>
+                    <p className="font-semibold text-sm md:text-base">Fullstack Developer, Web, Mobile</p>
+                    <p className="font-semibold text-white/60 text-xs md:text-sm">Fulltime • Jul 2023 - Present </p>
+                  </div>
+
+                  <p className="text-sm md:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aspernatur ducimus deleniti expedita excepturi odit, nihil repellat doloribus possimus eligendi, vel architecto consequuntur temporibus? Dignissimos reprehenderit error cum obcaecati repudiandae, incidunt autem suscipit iste esse nemo exercitationem veniam eveniet inventore?</p>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1">
+                    <p className="font-semibold text-sm md:text-base">PT Foxbyte Global Inovasi</p>
+                    <p className="font-semibold text-sm md:text-base">Web Developer</p>
+                    <p className="font-semibold text-white/60 text-xs md:text-sm">Intern • Aug 2022 - Oct 2022 </p>
+                  </div>
+
+                  <p className="text-sm md:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aspernatur ducimus deleniti expedita excepturi odit, nihil repellat doloribus possimus eligendi, vel architecto consequuntur temporibus? Dignissimos reprehenderit error cum obcaecati repudiandae, incidunt autem suscipit iste esse nemo exercitationem veniam eveniet inventore?</p>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1">
+                    <p className="font-semibold text-sm md:text-base">PT Foxbyte Global Inovasi</p>
+                    <p className="font-semibold text-sm md:text-base">Web Developer</p>
+                    <p className="font-semibold text-white/60 text-xs md:text-sm">Intern • Dec 2021 - Feb 2022 </p>
+                  </div>
+
+                  <p className="text-sm md:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aspernatur ducimus deleniti expedita excepturi odit, nihil repellat doloribus possimus eligendi, vel architecto consequuntur temporibus? Dignissimos reprehenderit error cum obcaecati repudiandae, incidunt autem suscipit iste esse nemo exercitationem veniam eveniet inventore?</p>
+                </div>
+              </div>
+            </section>
+
+            <footer>
+              <p className="text-center text-xs mt-5">©️ ngurahputuryansurianjana. All rights reserved</p>
+            </footer>
         </main>
     );
 }
