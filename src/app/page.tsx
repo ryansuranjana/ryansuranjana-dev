@@ -8,6 +8,8 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { FaLaravel } from "react-icons/fa6";
 import { TbBrandReactNative } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
+import ProjectEKinerjaImg from "@/assets/img/e-kinerja.png"
+import ProjectPosSystemImg from "@/assets/img/pos-system.png"
 
 export default function Home() {
     return (
@@ -107,7 +109,7 @@ export default function Home() {
                   <div className="flex flex-col gap-1">
                     <p className="font-semibold text-sm md:text-base">PT Balisolutionbiz</p>
                     <p className="font-semibold text-sm md:text-base">Fullstack Developer, Web, Mobile</p>
-                    <p className="font-semibold text-white/60 text-xs md:text-sm">Fulltime • Jul 2023 - Present </p>
+                    <p className="font-semibold opacity-60 text-xs md:text-sm">Fulltime • Jul 2023 - Present </p>
                   </div>
 
                   <p className="text-sm md:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aspernatur ducimus deleniti expedita excepturi odit, nihil repellat doloribus possimus eligendi, vel architecto consequuntur temporibus? Dignissimos reprehenderit error cum obcaecati repudiandae, incidunt autem suscipit iste esse nemo exercitationem veniam eveniet inventore?</p>
@@ -117,7 +119,7 @@ export default function Home() {
                   <div className="flex flex-col gap-1">
                     <p className="font-semibold text-sm md:text-base">PT Foxbyte Global Inovasi</p>
                     <p className="font-semibold text-sm md:text-base">Web Developer</p>
-                    <p className="font-semibold text-white/60 text-xs md:text-sm">Intern • Aug 2022 - Oct 2022 </p>
+                    <p className="font-semibold opacity-60 text-xs md:text-sm">Intern • Aug 2022 - Oct 2022 </p>
                   </div>
 
                   <p className="text-sm md:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aspernatur ducimus deleniti expedita excepturi odit, nihil repellat doloribus possimus eligendi, vel architecto consequuntur temporibus? Dignissimos reprehenderit error cum obcaecati repudiandae, incidunt autem suscipit iste esse nemo exercitationem veniam eveniet inventore?</p>
@@ -127,7 +129,7 @@ export default function Home() {
                   <div className="flex flex-col gap-1">
                     <p className="font-semibold text-sm md:text-base">PT Foxbyte Global Inovasi</p>
                     <p className="font-semibold text-sm md:text-base">Web Developer</p>
-                    <p className="font-semibold text-white/60 text-xs md:text-sm">Intern • Dec 2021 - Feb 2022 </p>
+                    <p className="font-semibold opacity-60 text-xs md:text-sm">Intern • Dec 2021 - Feb 2022 </p>
                   </div>
 
                   <p className="text-sm md:text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque aspernatur ducimus deleniti expedita excepturi odit, nihil repellat doloribus possimus eligendi, vel architecto consequuntur temporibus? Dignissimos reprehenderit error cum obcaecati repudiandae, incidunt autem suscipit iste esse nemo exercitationem veniam eveniet inventore?</p>
@@ -135,7 +137,28 @@ export default function Home() {
               </div>
             </section>
 
-            <footer>
+            <section className="mb-4">
+              <h4 className="font-bold text-lg md:text-xl text-[#3BCEC6] mb-2">Projects</h4>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col md:flex-row md:gap-4 gap-2 px-4 py-2 border border-[#274643] rounded-lg w-full">
+                  <Image src={ProjectEKinerjaImg} alt="e-kinerja-img" width={184} height={122} className="rounded-lg" />
+                  <div>
+                    <p className="font-semibold">E - Kinerja</p>
+                    <p className="text-sm opacity-60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem asperiores sequi deserunt commodi, aspernatur praesentium porro non facilis id nesciunt atque molestias dolorum odit.</p>
+                  </div>
+                </div>
+                <div className="flex flex-col md:flex-row md:gap-4 gap-2 px-4 py-2 border border-[#274643] rounded-lg w-full">
+                  <Image src={ProjectPosSystemImg} alt="e-kinerja-img" width={184} height={122} className="rounded-lg md:order-2 order-1" />
+                  <div className="md:text-right text-left md:order-1 order-2">
+                    <p className="font-semibold">POS System</p>
+                    <p className="text-sm opacity-60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem asperiores sequi deserunt commodi, aspernatur praesentium porro non facilis id nesciunt atque molestias dolorum odit.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <footer className="pb-2">
               <p className="text-center text-xs mt-5">©️ ngurahputuryansurianjana. All rights reserved</p>
             </footer>
         </main>
