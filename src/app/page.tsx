@@ -2,8 +2,6 @@ import Header from "@/components/partials/Header";
 import Image from "next/image";
 import ProfileImg from "@/assets/img/me.png";
 import { IoLogoInstagram, IoLogoLinkedin, IoMdMail } from "react-icons/io";
-import ProjectEKinerjaImg from "@/assets/img/e-kinerja.png";
-import ProjectPosSystemImg from "@/assets/img/pos-system.png";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Section from "@/components/ui/Section";
 import SectionList from "@/components/ui/SectionList";
@@ -11,6 +9,9 @@ import skills from "@/lib/data/skills";
 import BadgeSkill from "@/components/ui/BadgeSkill";
 import experiences from "@/lib/data/experiences";
 import Experience from "@/components/ui/Experience";
+import ProjectList from "@/components/partials/ProjectList";
+import ProjectListSkeleton from "@/components/ui/ProjectListSkeleton";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -95,44 +96,9 @@ export default function Home() {
       <Section>
         <SectionTitle>Projects</SectionTitle>
 
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-col md:flex-row md:gap-4 gap-2 px-4 py-2 border border-[#274643] rounded-lg w-full">
-            <Image
-              src={ProjectEKinerjaImg}
-              alt="e-kinerja-img"
-              width={184}
-              height={122}
-              className="rounded-lg"
-            />
-            <div>
-              <p className="font-semibold">E - Kinerja</p>
-              <p className="text-sm opacity-60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Suscipit rem asperiores sequi deserunt commodi, aspernatur
-                praesentium porro non facilis id nesciunt atque molestias
-                dolorum odit.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row md:gap-4 gap-2 px-4 py-2 border border-[#274643] rounded-lg w-full">
-            <Image
-              src={ProjectPosSystemImg}
-              alt="e-kinerja-img"
-              width={184}
-              height={122}
-              className="rounded-lg md:order-2 order-1"
-            />
-            <div className="md:text-right text-left md:order-1 order-2">
-              <p className="font-semibold">POS System</p>
-              <p className="text-sm opacity-60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Suscipit rem asperiores sequi deserunt commodi, aspernatur
-                praesentium porro non facilis id nesciunt atque molestias
-                dolorum odit.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Suspense fallback={<ProjectListSkeleton />}>
+          <ProjectList />
+        </Suspense>
       </Section>
 
       <footer className="pb-2">
