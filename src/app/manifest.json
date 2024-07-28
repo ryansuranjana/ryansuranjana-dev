@@ -1,0 +1,32 @@
+{
+  "name": "Ryan Suranjana",
+  "short_name": "Ryan",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "portrait",
+  "description": "Portofolio of Ryan Suranjana",
+  "icons": [
+    {
+      "src": "assets/img/me.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/img/me.jpeg",
+      "sizes": "256x256",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/img/me.jpeg",
+      "sizes": "384x384",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/img/me.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "splash_pages": null
+}

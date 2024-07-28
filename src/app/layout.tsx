@@ -7,7 +7,7 @@ const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ryan Suranjana | About",
-  description: "...",
+  description: "Web Developer, Mobile Developer",
 };
 
 export default function RootLayout({

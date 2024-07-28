@@ -1,6 +1,6 @@
 import Header from "@/components/partials/Header";
 import Image from "next/image";
-import ProfileImg from "@/assets/img/me.png";
+import ProfileImg from "@/assets/img/me.jpeg";
 import { IoLogoInstagram, IoLogoLinkedin, IoMdMail } from "react-icons/io";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Section from "@/components/ui/Section";
