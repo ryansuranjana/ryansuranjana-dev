@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import Header from "@/components/partials/Header";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -23,7 +24,11 @@ export default function RootLayout({
           enableSystem={false}
           defaultTheme="dark"
         >
-          {children}
+          <div className="w-full md:w-[60%] md:px-0 px-5 mx-auto ">
+            <Header />
+
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

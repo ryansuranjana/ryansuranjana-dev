@@ -1,4 +1,3 @@
-import Header from "@/components/partials/Header";
 import Image from "next/image";
 import ProfileImg from "@/assets/img/me.jpeg";
 import { IoLogoInstagram, IoLogoLinkedin, IoMdMail } from "react-icons/io";
@@ -16,9 +15,7 @@ import { Suspense } from "react";
 export default function Home() {
   return (
     <>
-      <Header />
-
-      <main className="w-full md:w-[60%] md:px-0 px-5 mx-auto animate-bounce-back-from-bottom">
+      <main className="animate-bounce-back-from-bottom">
         <Section>
           <div className="mt-12 flex flex-col gap-4">
             <Image
