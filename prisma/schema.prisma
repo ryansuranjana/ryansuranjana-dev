@@ -25,3 +25,25 @@ model Project {
 
   @@map("projects")
 }
+
+model CommitWord {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  code String @unique
+  commitMessage String
+  contributor String
+  avatarContributor String?
+  isShow Boolean? @default(true)
+  isAdmin Boolean? @default(true)
+  likes Int
+  status StatusCommit @default(MERGED)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("commit_words")
+}
+
+enum StatusCommit {
+  PENDING
+  MERGED
+  REJECTED
+}

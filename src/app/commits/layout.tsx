@@ -16,6 +16,7 @@ import {
   FaCalendar,
 } from "react-icons/fa6";
 import type { Metadata } from "next";
+import { DateRangePicker } from "@/components/ui/DateRangePicker";
 
 export const metadata: Metadata = {
   title: "Ryan Suranjana | Commits",
@@ -27,8 +28,8 @@ const CommitsLayout = ({ children }: { children: React.ReactNode }) => {
     <div className="mt-12 pb-12">
       <p className="font-semibold text-lg mb-4">Commits</p>
       <hr className="dark:border-[#FFFFFF]/30 border-black" />
-      <div className="mt-6 flex w-full md:items-center items-start justify-between">
-        <div className="flex gap-4">
+      <div className="mt-6 flex md:flex-row flex-col w-full md:items-center items-start justify-between md:gap-0 gap-4">
+        <div className="flex gap-4 md:order-1 order-2">
           <DropdownMenu>
             <DropdownMenuTrigger>
               <div className="px-6 py-1 border border-[#274643] rounded-md flex items-center">
@@ -70,7 +71,7 @@ const CommitsLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
 
-        <div className="flex md:flex-row flex-col gap-4">
+        <div className="flex md:flex-row flex-col gap-4 md:order-2 order-1">
           <div className="px-6 py-1 border border-[#274643] rounded-md flex items-center cursor-pointer">
             <div className="flex items-center gap-2">
               <FaCodePullRequest
@@ -80,7 +81,8 @@ const CommitsLayout = ({ children }: { children: React.ReactNode }) => {
               Pull Requests
             </div>
           </div>
-          <DropdownMenu>
+          <DateRangePicker />
+          {/* <DropdownMenu>
             <DropdownMenuTrigger>
               <div className="px-6 py-1 border border-[#274643] rounded-md flex items-center">
                 <div className="flex items-center gap-2 mr-4">
@@ -96,7 +98,7 @@ const CommitsLayout = ({ children }: { children: React.ReactNode }) => {
                 />
               </div>
             </DropdownMenuTrigger>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </div>
       </div>
 

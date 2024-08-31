@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/partials/Header";
+import ReactQueryProvider from "@/components/providers/ReactQueryProvider";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -18,19 +19,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={urbanist.className}>
-        <ThemeProvider
-          attribute="class"
-          enableSystem={false}
-          defaultTheme="dark"
-        >
-          <div className="w-full md:w-[60%] md:px-0 px-5 mx-auto ">
-            <Header />
+      <ReactQueryProvider>
+        <body className={urbanist.className}>
+          <ThemeProvider
+            attribute="class"
+            enableSystem={false}
+            defaultTheme="dark"
+          >
+            <div className="w-full md:w-[60%] md:px-0 px-5 mx-auto ">
+              <Header />
 
-            {children}
-          </div>
-        </ThemeProvider>
-      </body>
+              {children}
+            </div>
+          </ThemeProvider>
+        </body>
+      </ReactQueryProvider>
     </html>
   );
 }
