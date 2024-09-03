@@ -8,25 +8,6 @@ export async function GET(request: NextRequest) {
   const startDate = request.nextUrl.searchParams.get("from") as string;
   const endDate = request.nextUrl.searchParams.get("to") as string;
 
-  console.log("start date : ", startDate);
-  console.log("end date : ", endDate);
-
-  // const dateFilter =
-  //   startDate && endDate
-  //     ? [
-  //         {
-  //           createdAt: {
-  //             gte: new Date(startDate),
-  //           },
-  //         },
-  //         {
-  //           createdAt: {
-  //             lte: new Date(endDate),
-  //           },
-  //         },
-  //       ]
-  //     : [];
-
   const dateFilter =
     startDate && endDate
       ? {
@@ -36,8 +17,6 @@ export async function GET(request: NextRequest) {
           },
         }
       : {};
-
-  console.log("Filter date :", dateFilter);
 
   const data = await db.commitWord.findMany({
     where: {

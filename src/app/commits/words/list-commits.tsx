@@ -10,6 +10,7 @@ import moment from "moment";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { fetchCommitWords } from "@/lib/data/commits";
 import { useSearchParams } from "next/navigation";
+import LikesButton from "@/components/ui/commits/words/LikesButton";
 
 const Words = () => {
   const searchParams = useSearchParams();
@@ -40,8 +41,6 @@ const Words = () => {
       }
     }, []);
   }, [res]);
-
-  console.log("data commits : ", data);
 
   return (
     <div className="mt-12">
@@ -93,14 +92,7 @@ const Words = () => {
                       </div>
                       <div className="flex gap-4 self-end md:self-center">
                         <p className="font-bold text-xs">{value.code}</p>
-                        <BsSuitHeart
-                          size={20}
-                          className="cursor-pointer dark:text-[#FFFFFF99] text-black/80"
-                        />
-                        {/* <GrSend
-                        size={20}
-                        className="cursor-pointer dark:text-[#FFFFFF99] text-black/80"
-                      /> */}
+                        <LikesButton id={value.id} />
                       </div>
                     </div>
                     {j !== commit.commits.length - 1 && (

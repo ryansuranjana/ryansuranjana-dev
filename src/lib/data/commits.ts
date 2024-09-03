@@ -44,3 +44,26 @@ export const fetchCommitWords = async ({
     console.log("Error fetch commit words :", e);
   }
 };
+
+type TResponseLikeCommitWord = {
+  message: string;
+  data: TCommitWord;
+};
+
+export const likeCommitWord = async (
+  id: string
+): Promise<TResponseLikeCommitWord | undefined> => {
+  try {
+    const res = await fetch(
+      `http://localhost:3000/api/commits/words/likes/${id}`,
+      {
+        method: "PATCH",
+      }
+    );
+    const data = (await res.json()) as TResponseLikeCommitWord;
+
+    return data;
+  } catch (e) {
+    console.log("Error like commit word :", e);
+  }
+};

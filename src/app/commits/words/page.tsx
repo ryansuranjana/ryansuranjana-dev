@@ -18,7 +18,12 @@ export default async function Hydration({
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
-    queryKey: ["commits-words"],
+    queryKey: [
+      "commits-words",
+      Number(searchParams?.page),
+      searchParams?.from,
+      searchParams?.to,
+    ],
     queryFn: () =>
       fetchCommitWords({
         page: Number(searchParams?.page),
